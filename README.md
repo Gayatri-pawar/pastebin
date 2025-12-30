@@ -1,3 +1,4 @@
-To run the backend :
 
-1) npm install express mysql2 cors nanoid
+ Vercel Link : https://pastebin-git-master-gayatri-pawar-2232s-projects.vercel.app/ 
+
+ AlSo I have attached my database sql file for your referrence.

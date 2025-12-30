@@ -24,41 +24,52 @@ export default function CreatePaste() {
   };
 
   return (
-    <div>
-      <h2>Create Paste</h2>
+    <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
+      <div className="card shadow p-4" style={{ maxWidth: "500px", width: "100%" }}>
+        <h2 className="card-title text-center mb-4">Create Paste</h2>
 
-      <textarea
-        rows="6"
-        placeholder="Paste text here..."
-        value={content}
-        onChange={(e) => setContent(e.target.value)}
-      />
+        <div className="mb-3">
+          <textarea
+            className="form-control"
+            rows="6"
+            placeholder="Paste text here..."
+            value={content}
+            onChange={(e) => setContent(e.target.value)}
+          />
+        </div>
 
-      <br />
+        <div className="mb-3">
+          <input
+            type="number"
+            className="form-control"
+            placeholder="TTL (seconds)"
+            value={ttl}
+            onChange={(e) => setTtl(e.target.value)}
+          />
+        </div>
 
-      <input
-        placeholder="TTL (seconds)"
-        value={ttl}
-        onChange={(e) => setTtl(e.target.value)}
-      />
+        <div className="mb-3">
+          <input
+            type="number"
+            className="form-control"
+            placeholder="Max views"
+            value={maxViews}
+            onChange={(e) => setMaxViews(e.target.value)}
+          />
+        </div>
 
-      <br />
+        <div className="d-grid">
+          <button className="btn btn-primary" onClick={submit}>
+            Create
+          </button>
+        </div>
 
-      <input
-        placeholder="Max views"
-        value={maxViews}
-        onChange={(e) => setMaxViews(e.target.value)}
-      />
-
-      <br />
-
-      <button onClick={submit}>Create</button>
-
-      {link && (
-        <p>
-          Share link: <a href={link}>{link}</a>
-        </p>
-      )}
+        {link && (
+          <p className="mt-3 text-center">
+            Share link: <a href={link}>{link}</a>
+          </p>
+        )}
+      </div>
     </div>
   );
 }

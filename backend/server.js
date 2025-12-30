@@ -83,7 +83,7 @@ app.get("/p/:id", async (req, res) => {
       [id]
     );
 
-    // SAFE HTML rendering (no script execution)
+    // SAFE HTML rendering 
     res.send(`
       <!DOCTYPE html>
       <html>
